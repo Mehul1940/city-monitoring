@@ -1,0 +1,34 @@
+.cube-wrapper {
+  perspective: 800px;
+}
+
+.cube3d {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinCube 6s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(145deg, #8a4ade, #3a0a94); /* green gradient */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+  opacity: 0.95;
+}
+
+/* Position each face */
+.front  { transform: rotateY(0deg) translateZ(16px); }
+.back   { transform: rotateY(180deg) translateZ(16px); }
+.right  { transform: rotateY(90deg) translateZ(16px); }
+.left   { transform: rotateY(-90deg) translateZ(16px); }
+.top    { transform: rotateX(90deg) translateZ(16px); }
+.bottom { transform: rotateX(-90deg) translateZ(16px); }
+
+@keyframes spinCube {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
