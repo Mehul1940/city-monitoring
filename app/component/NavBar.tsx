@@ -32,11 +32,6 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Toggle dark mode (logic placeholder)
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-  };
 
   return (
     <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 px-4 py-3 md:px-6 shadow-xl border-b border-gray-700/50 relative z-20">
