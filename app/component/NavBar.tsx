@@ -1,13 +1,10 @@
 "use client";
 import {
-  Bell,
   Search,
   User,
   ChevronDown,
   Settings,
   LogOut,
-  Moon,
-  Sun,
   Menu,
   X,
 } from "lucide-react";
