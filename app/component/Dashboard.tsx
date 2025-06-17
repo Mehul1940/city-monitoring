@@ -87,7 +87,7 @@ export default function Dashboard() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/city-monitoring/"
+        "https://api-insight-aegh.onrender.com/api/city-monitoring/"
       );
       const data = await response.json();
       setData(data);
@@ -101,7 +101,7 @@ export default function Dashboard() {
   const handleDelete = async (id: number) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/city-monitoring/${id}/`,
+        `https://api-insight-aegh.onrender.com/api/city-monitoring/${id}/`,
         {
           method: "DELETE",
           headers: {
