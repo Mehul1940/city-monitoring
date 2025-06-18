@@ -38,7 +38,7 @@ const EditModal: FC<EditModalProps> = ({ report, onClose, onUpdate }) => {
       }
 
       const res = await fetch(
-        `http://127.0.0.1:8000/api/city-monitoring/${report.id}/`,
+        `https://api-insight-aegh.onrender.com/api/city-monitoring/${report.id}/`,
         {
           method: "PATCH",
           body: formData,
